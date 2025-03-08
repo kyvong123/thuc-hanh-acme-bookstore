@@ -1,55 +1,55 @@
-# Th?c h�nh x�y d?ng web qu?n l� hi?u s�ch
+# Thực hành xây dựng web quản lý hiệu sách
 
-## Y�u c?u
+## Yêu cầu
 
 ``` bash
 .NET 8.0
-c? s? d? li?u SQL
+cơ sở dữ liệu SQL
 ```
 
-# C�i ??t, x�y d?ng c? s? d? li?u v� ch?y ?ng d?ng:
+# Cài đặt, xây dưng cơ sở dữ liệu và chạy ứng dụng:
 
 
-## C�i ??t Abp Cli:
+## Cài đặt Abp Cli:
 ``` bash
-C�i ??t Abp Cli b?ng c�u l?nh cmd:
+Cài đặt Abp Cli bằng câu lệnh cmd:
 $ dotnet tool install -g Volo.Abp.Studio.Cli
 
-C�i ??t c�c g�i npm c?n thi?t cho d? �n khi t?o ?ng d?ng:
+Cài đặt các gói npm cần thiết cho dự án khi tạo ứng dụng:
 $ abp install-libs
-L?nh abp bundle cung c?p h? tr? ?�ng g�i v� thu nh? cho c�c t�i nguy�n cho d? �n Blazor.
+Lệnh abp bundle cung cấp hỗ trợ đóng gói và thu nhỏ cho các tài nguyên cho dự án Blazor.
 $ abp bundle
 ```
 
-## X�y d?ng c? s? d? li?u
+## Xây dựng cơ sở dữ liệu
 ``` bash
-K?t n?i c? s? d? li?u b?ng sql server management studio v� t?o database, ??t t�n l� BookStore
+Kết nối cơ sở dữ liệu bằng sql server management studio và tạo database, đặt tên là BookStore
 
-V�o t?p tin appsettings.json tr�n th? m?c src/Acme.BookStore.Blazor v� src/Acme.BookStore.DbMigrator ch?nh s?a l?i c�c connectionstring v?i server name, user, password ph� h?p.
+Vào tập tin appsettings.json trên thư mục src/Acme.BookStore.Blazor và src/Acme.BookStore.DbMigrator chỉnh sửa lại các connectionstring với server name, user, password phù hợp.
 
-X�a c�c file b�n trong th? m?c src/Acme.BookStore.EntityFrameworkCore/Migrations
+Xóa các file bên trong thư mục src/Acme.BookStore.EntityFrameworkCore/Migrations
 
-V�o command line truy c?p th? m?c src/Acme.BookStore.EntityFrameworkCore
+Vào command line truy cập thư mục src/Acme.BookStore.EntityFrameworkCore
 
-G� c�c l?nh sau ?? th�m c�c migration class v�o project:
+Gõ các lệnh sau để thêm các migration class vào project:
 $ dotnet ef migrations add Created_Book_Entity
 $ dotnet ef migrations add Added_Authors
 $ dotnet ef migrations add Added_AuthorId_To_Book
-G� l?nh ?? c?p nh?t c? s? d? li?u tr�n SQL:
+Gõ lệnh để cập nhật cơ sở dữ liệu trên SQL:
 $ dotnet ef database update
 
-## Ch?y ?ng d?ng
-Ch?y ?ng d?ng v?i c?u h�nh C#, v?i project ch�nh l� Acme.BookStore.Blazor
+## Chạy ứng dụng
+Chạy ứng dụng với cấu hình C#, với project chính là Acme.BookStore.Blazor
 
-web qu?n l� hi?u s�ch: https://localhost:{port}
+web quản lý hiệu sách: https://localhost:{port}
 
-Truy c?p web v?i t�i kho?n superadmin:
+Truy cập web với tài khoản superadmin:
 Username: admin
 Password: 1q2w3E*
 
-C� th? ??ng k�, t?o th�m t�i kho?n r?i s? d?ng t�i kho?n superadmin g�n quy?n v� thao t�c v?i web.
+Có thể đăng ký, tạo thêm tài khoản rồi sử dụng tài khoản superadmin gán quyền và thao tác với web.
 
-web danh s�ch c�c api: https://localhost:{port}/swagger/index.html
+web danh sách các api: https://localhost:{port}/swagger/index.html
 
 
 ```
