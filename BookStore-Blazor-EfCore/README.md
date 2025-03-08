@@ -2,12 +2,11 @@
 
 ## Yêu cầu
 
-``` bash
-.NET 8.0
-cơ sở dữ liệu SQL
-```
+* .NET 8.0
+* cơ sở dữ liệu SQL
 
-# Cài đặt, xây dưng cơ sở dữ liệu và chạy ứng dụng:
+
+## Cài đặt, xây dưng cơ sở dữ liệu và chạy ứng dụng:
 
 
 ## Cài đặt Abp Cli:
