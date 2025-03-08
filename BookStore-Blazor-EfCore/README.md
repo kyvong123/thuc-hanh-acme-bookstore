@@ -35,21 +35,23 @@ Gõ các lệnh sau để thêm các migration class vào project:
 $ dotnet ef migrations add Created_Book_Entity
 $ dotnet ef migrations add Added_Authors
 $ dotnet ef migrations add Added_AuthorId_To_Book
+
 Gõ lệnh để cập nhật cơ sở dữ liệu trên SQL:
 $ dotnet ef database update
+```
 
 ## Chạy ứng dụng
+``` bash
 Chạy ứng dụng với cấu hình C#, với project chính là Acme.BookStore.Blazor
 
-web quản lý hiệu sách: https://localhost:{port}
+Trang web quản lý hiệu sách: https://localhost:{port}
 
 Truy cập web với tài khoản superadmin:
 Username: admin
 Password: 1q2w3E*
-
 Có thể đăng ký, tạo thêm tài khoản rồi sử dụng tài khoản superadmin gán quyền và thao tác với web.
 
-web danh sách các api: https://localhost:{port}/swagger/index.html
+Trang web hiển thị danh sách các api: https://localhost:{port}/swagger/index.html
 
 
 ```
