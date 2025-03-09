@@ -1,15 +1,9 @@
 # Thực hành xây dựng web quản lý hiệu sách
-
 ## Yêu cầu
-
 * .NET 8.0
 * cơ sở dữ liệu SQL
 
-
-## Cài đặt, xây dưng cơ sở dữ liệu và chạy ứng dụng:
-
-
-## Cài đặt Abp Cli:
+## Cài đặt Abp Cli
 ``` bash
 Cài đặt Abp Cli bằng câu lệnh cmd:
 $ dotnet tool install -g Volo.Abp.Studio.Cli
@@ -51,6 +45,4 @@ Password: 1q2w3E*
 Có thể đăng ký, tạo thêm tài khoản rồi sử dụng tài khoản superadmin gán quyền và thao tác với web.
 
 Trang web hiển thị danh sách các api: https://localhost:{port}/swagger/index.html
-
-
 ```
